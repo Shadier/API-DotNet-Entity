@@ -35,11 +35,17 @@ namespace Training
         public void ConfigureOperations(IServiceCollection services)
         {
             services.AddTransient<GetUsers>();
+            services.AddTransient<GetProducts>();
+            services.AddTransient<GetOrdersItems>();
+            services.AddTransient<GetOrders>();
         }
 
         public void ConfigureRepositories(IServiceCollection services)
         {
-            services.AddTransient<IUsersRepository,UsersRepository>();
+            services.AddTransient<IUsersRepository, UsersRepository>();
+            services.AddTransient<IOrdersItemsRepository, OrdersItemsRepository>();
+            services.AddTransient<IOrdersRepository, OrdersRepository>();
+            services.AddTransient<IProductsRepository, ProductsRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

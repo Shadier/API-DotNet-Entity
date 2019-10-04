@@ -10,7 +10,7 @@ using Training.DTO;
 
 namespace Training.Data.Repositories
 {
-    class OrdersRepository : IOrdersRepository
+    public class OrdersRepository : IOrdersRepository
     {
         private readonly StoreContext _StoreContext;
         public OrdersRepository(StoreContext storeContext)

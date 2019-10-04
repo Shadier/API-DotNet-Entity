@@ -13,7 +13,7 @@ namespace Training.Data.Extensions
                 Id = order.Id,
                 user = order.UserId,
                 status = order.Status,
-                created_at = order.Create_at
+                created_at = order.Created_at
             };
         }
 
@@ -24,7 +24,7 @@ namespace Training.Data.Extensions
                 Id = order.Id,
                 UserId = order.user,
                 Status = order.status,
-                Create_at = order.created_at
+                Created_at = order.created_at
             };
         }
     }

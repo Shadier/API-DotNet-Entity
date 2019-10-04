@@ -10,7 +10,7 @@ using Training.DTO;
 
 namespace Training.Data.Repositories
 {
-    class OrdersItemsRepository : IOrdersItemsRepository
+    public class OrdersItemsRepository : IOrdersItemsRepository
     {
         private readonly StoreContext _StoreContext;
         public OrdersItemsRepository(StoreContext storeContext)
@@ -19,8 +19,8 @@ namespace Training.Data.Repositories
         }
         public async Task<List<DTO.Order_Item>> GetAll()
         {
-            var orderProduct = await _StoreContext.OrdersItems.ToListAsync();
-            return orderProduct.Select(s => s.ToDTO()).ToList();
+            var orderItems = await _StoreContext.OrderItem.ToListAsync();
+            return orderItems.Select(s => s.ToDTO()).ToList();
         }
     }
 }

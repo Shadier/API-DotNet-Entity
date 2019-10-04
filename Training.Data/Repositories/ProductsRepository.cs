@@ -7,7 +7,7 @@ using Training.Data.Extensions;
 
 namespace Training.Data.Repositories
 {
-    class ProductsRepository : IProductsRepository
+    public class ProductsRepository : IProductsRepository
     {
         private readonly StoreContext _StoreContext;
         public ProductsRepository(StoreContext storeContext)

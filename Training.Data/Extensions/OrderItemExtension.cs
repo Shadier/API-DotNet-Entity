@@ -8,6 +8,7 @@ namespace Training.Data.Extensions
     {
         public static DTO.Order_Item ToDTO(this Models.OrderItem oi)
         {
+            DTO.Product product = new DTO.Product();
             return new DTO.Order_Item
             {
                 id = oi.Id,
